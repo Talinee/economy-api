@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# VS Code
+.vscode
+
+# Any log
+*.log
+
+# Node
+node_modules/
+
+# Build Folder
+dist/
+
+uploads/
+
+exports/

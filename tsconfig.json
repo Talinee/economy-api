@@ -1,0 +1,38 @@
+{
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ],
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "baseUrl": "./src",
+        "rootDir": "./src",
+        "paths": {
+            "*": [
+              "*"
+            ]
+        },
+        "declaration": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "outDir": "dist",
+        "sourceMap": true,
+        "sourceRoot": "src",
+        "target": "ESNext",
+        "lib": ["esnext", "dom"],
+        "skipLibCheck" : true ,
+        "plugins": [
+            { "transform": "ts-transformer-imports" },
+            { "transform": "ts-optchain/transform" },
+        ]
+    },
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "atom": { "rewriteTsconfig": false }
+}

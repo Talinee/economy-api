@@ -1,0 +1,52 @@
+{
+  "name": "economy",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "private": true,
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "ttsc -p tsconfig.json",
+    "dev": "ts-node-dev --compiler ttypescript --clear --watch ./src --no-deps ./src/index.ts ",
+    "start": "node dist/index.js",
+    "seed": "ts-node-dev --compiler ttypescript --no-deps ./src/seeds/cli.ts ",
+    "seed-prod": "node dist/seeds/cli.js",
+    "lint": "eslint ./src --ext .ts,.js",
+    "create-secret": "ts-node-dev --compiler ttypescript --no-deps ./src/apple/secret.ts "
+  },
+  "dependencies": {
+    "@sentry/node": "^5.7.1",
+    "@types/mongoose": "5.10.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
+    "lodash.merge": "^4.6.2",
+    "mongoose": "5.9.13",
+    "mongoose-delete": "^0.5.1",
+    "mongoose-hidden": "^1.8.1",
+    "nodejs-base64": "^1.0.3",
+    "nodemailer": "^6.5.0",
+    "oauth2-server-typescript": "^5.0.0-dev.3",
+    "omise": "^0.8.4",
+    "pluralize": "^8.0.0",
+    "request": "^2.88.2",
+    "ts-ignore": "^0.0.3",
+    "ts-mongoose": "0.0.24",
+    "ts-optchain": "^0.1.8",
+    "upash": "^1.0.2",
+    "validator": "^13.6.0"},
+"devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/node": "^14.14.7",
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
+    "eslint": "^6.6.0",
+    "rimraf": "^3.0.0",
+    "ts-node-dev": "1.0.0-pre.44",
+    "ts-transformer-imports": "^0.4.3",
+    "ttypescript": "1.5.7",
+    "typescript": "4.0.5"
+}
+}
+
